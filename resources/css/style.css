@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.main_area {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to right, #d883ff, #895fff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.main_area h1 {
+  font-size: 5rem;
+}
+
+.main_area .left_time {
+  line-height: 35px;
+}
+
+.main_area .ex {
+  font-size: 2rem;
+}
+
+.timer_div {
+  text-align: center;
+}
