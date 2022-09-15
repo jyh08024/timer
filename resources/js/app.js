@@ -25,22 +25,24 @@ const Timer = {
 
     document.querySelector(".today").innerHTML = `${year}년 ${month}월 ${day}일`;
 
-    setInterval(() => {
-      const t = new Date();
-      const h = pad(12 - (24 - t.getHours()));
-      const m = pad(t.getMinutes());
-      const s = pad(t.getSeconds());
-      
-      Timer.nowTimer(h, m, s);
+    setInterval(() => {      
+      Timer.nowTimer();
     }, 1000);
   },
 
-  nowTimer(h, m, s) {
-    document.querySelector(".now_time").innerHTML = Timer.nowTimerHtml(h, m, s);
+  nowTimer() {
+    const t = new Date();
+    let h = pad(t.getHours() % 12);
+    h = h ?? 12;
+    const m = pad(t.getMinutes());
+    const s = pad(t.getSeconds());
+    const mr = t.getHours() > 12 ? "PM" : "AM";
+    document.querySelector(".now_time").innerHTML = Timer.nowTimerHtml(mr, h, m, s);
   },
 
-  nowTimerHtml(hour, min, sec) {
+  nowTimerHtml(mr, hour, min, sec) {
     return `
+      <h1 class="meridiem">${mr}</h1>
       <h1 class="hour">${hour}</h1>
       <h1 class="min">${min}</h1>
       <h1 class="sec">${sec}</h1>

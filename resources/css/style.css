@@ -72,6 +72,7 @@ html, body {
   transform: rotate(8deg);
 }
 
+.meridiem::before,
 .sec::before,
 .min::before,
 .hour::before {
@@ -83,6 +84,10 @@ html, body {
   font-family: "Microsoft Phagspa";
   font-weight: 100;
   opacity: .8;
+}
+
+.meridiem::before {
+  content: "meridiem";
 }
 
 .sec::before {
