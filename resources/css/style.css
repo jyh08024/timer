@@ -1,8 +1,17 @@
+@font-face {
+  font-family: "noto";
+  src: url(../Noto_Sans_KR/NotoSansKR-Regular.otf);
+}
+
 * {
   margin: 0;
   padding: 0;
   list-style: none;
   box-sizing: border-box;
+}
+
+html, body {
+  font-family: "noto";
 }
 
 .main_area {
@@ -15,10 +24,6 @@
   color: #fff;
 }
 
-.main_area h1 {
-  font-size: 5rem;
-}
-
 .main_area .left_time {
   line-height: 35px;
 }
@@ -29,4 +34,65 @@
 
 .timer_div {
   text-align: center;
+  padding-bottom: 7rem;
+}
+
+.now_time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.today {
+  text-align: center;
+  font-family: "Microsoft Phagspa", "noto";
+  font-size: 3rem;
+  padding-bottom: 5rem;
+  text-shadow: 1px 0 #fff;
+  letter-spacing: -1.5px;
+}
+
+.timer_div h1 {
+  width: 270px;
+  font-family: "impact";
+  position: relative;
+  padding: 40px 20px;
+  margin: 0 80px 0 80px;
+  font-size: 13rem;
+}
+
+.timer_div h1:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background: #fff;
+  top: 8%;
+  right: -30%;
+  transform: rotate(8deg);
+}
+
+.sec::before,
+.min::before,
+.hour::before {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 2.4rem;
+  font-family: "Microsoft Phagspa";
+  font-weight: 100;
+  opacity: .8;
+}
+
+.sec::before {
+  content: "seconds";
+}
+
+.min::before {
+  content: "minutes";
+}
+
+.hour::before {
+  content: "hours";
 }
