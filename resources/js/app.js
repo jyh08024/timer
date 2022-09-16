@@ -8,6 +8,14 @@ const App = {
   init() {
     App.hook();
     Timer.init();
+
+    setTimeout(() => {
+      const load = document.querySelector(".load");
+      load.style.opacity = 0;
+      load.style.pointerEvents = "none";
+
+      document.querySelector(".t_box").style.opacity = 1;
+    }, 1500);
   },
 
   hook() {
