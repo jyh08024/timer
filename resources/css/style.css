@@ -155,3 +155,15 @@ html, body {
 .hour::before {
   content: "hours";
 }
+
+.menu_btn_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu_btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -19,7 +19,13 @@ const App = {
   },
 
   hook() {
-    // document.querySelector("")
+    document.querySelector(".timer_b").addEventListener("click", App.changeType());
+    document.querySelector(".stop_b").addEventListener("click", App.changeType());
+    document.querySelector(".a_b").addEventListener("click", App.changeType());
+  },
+
+  changeType(e) {
+
   }
 }
 
@@ -29,11 +35,11 @@ const Timer = {
 
     const year = today.getFullYear();
     const month = pad(today.getMonth() + 1);
-    const day = pad(today.getDay());
+    const day = pad(today.getDate());
 
     document.querySelector(".today").innerHTML = `${year}년 ${month}월 ${day}일`;
 
-    setInterval(() => {      
+    setInterval(() => {
       Timer.nowTimer();
     }, 1000);
   },
