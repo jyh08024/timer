@@ -65,7 +65,7 @@ const Timer = {
 
   leftTimerHtml(hour, min, sec) {
     return `
-        <h1 class="left_time time"><span class="hour">00</span>:<span class="min">00</span>:<span class="sec">00</span></h1>
+        <h1 class="left_time time"><span class="hour">${hour}</span>:<span class="min">${min}</span>:<span class="sec">${sec}</span></h1>
       `
   }
 }

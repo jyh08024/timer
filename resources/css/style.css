@@ -167,3 +167,14 @@ html, body {
   align-items: center;
   justify-content: space-between;
 }
+
+.btn {
+  padding: .5rem 1.2rem;
+  border-radius: 9999px;
+  background: #fff;
+  border: 1px solid #fff;
+  margin: 0 1rem;
+  background: linear-gradient(to bottom, #d883ff, #895fff);
+  color: #fff;
+  cursor: pointer;
+}
